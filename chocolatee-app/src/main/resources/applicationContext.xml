@@ -3,22 +3,26 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-           
-    <bean class="com.xworkz.chocolate.Chocolate" id="chocolate">
-     <constructor-arg name="name" value="${name}"></constructor-arg>
-     <constructor-arg name="size" value="${size}"></constructor-arg>
-     </bean>   
-       
-     <bean class="com.xworkz.chocolate.Database" id="database">
-       <constructor-arg name="url" value="${url}"></constructor-arg>
-       <constructor-arg name="username" value="${username}"></constructor-arg>
-       <constructor-arg name="password" value="${password}"></constructor-arg>    
-     </bean>  
-        
-        <bean
-        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-        id="propertyPlaceholderConfigure">
-        <property name="location" value="application.properties"></property>
-        </bean>
-      
+
+	<bean class="com.xworkz.chocolate.Chocolate" id="chocolate"
+		scope="prototype">
+		<constructor-arg name="name" value="${Chocolate.name}" />
+		<constructor-arg name="size" value="${Chocolate.size}" />
+	</bean>
+
+	<bean class="com.xworkz.chocolate.Database" id="database">
+		<constructor-arg name="url" value="${Database.url}" />
+		<constructor-arg name="username"
+			value="${Database.username}" />
+		<constructor-arg name="password"
+			value="${Database.password}" />
+		<constructor-arg name="name" value="${Database.name}" />
+	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+		id="propertyPlaceholderConfigure">
+		<property name="location" value="application.properties" />
+	</bean>
+
 </beans>

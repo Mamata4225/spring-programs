@@ -6,7 +6,7 @@ public class Chocolate {
 	public double price;
 	public String brand;
 
-	 public Chocolate(String name, String size, double price, String brand) {
+	public Chocolate(String name, String size, double price, String brand) {
 		super();
 		this.name = name;
 		this.size = size;
@@ -21,11 +21,12 @@ public class Chocolate {
 		this.size = size;
 		System.out.println("two parameterized constructor");
 	}
+
 	public Chocolate() {
 		System.out.println("Zero parameterized constructed");
-		
+
 	}
-   
+
 	public String getName() {
 		return name;
 	}
