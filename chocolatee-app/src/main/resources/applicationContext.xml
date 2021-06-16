@@ -25,4 +25,54 @@
 		<property name="location" value="application.properties" />
 	</bean>
 
+	<bean class="com.xworkz.chocolate.Supermarket" id="supermarket">
+		<constructor-arg name="name" value="xyz" />
+		<constructor-arg name="noOfCounters" value="4" />
+		<constructor-arg name="address" ref="addressID" />
+		<constructor-arg name="gst" value="2.3" />
+		<constructor-arg name="worker" ref="workerID" />
+	</bean>
+
+	<bean class="com.xworkz.chocolate.Worker" id="workerID">
+		<constructor-arg name="name" value="manu" />
+		<constructor-arg name="age" value="24" />
+		<constructor-arg name="gender" value="male" />
+		<constructor-arg name="phoneNo" value="1236547890" />
+	</bean>
+
+	<bean class="com.xworkz.chocolate.Address" id="addressID">
+		<constructor-arg name="street" value="xyz" />
+		<constructor-arg name="buildingNo" value="3" />
+		<constructor-arg name="doorNo" value="144" />
+		<constructor-arg name="pinCode" value="571253" />
+		<constructor-arg name="area" value="vijaynagar" />
+	</bean>
+
+	<bean class="com.xworkz.chocolate.Sanitizer" id="sanitizer">
+		<constructor-arg name="name" value="Degya" />
+		<constructor-arg name="price" value="550" />
+		<constructor-arg name="brand" value="abc" />
+		<constructor-arg name="quantity" value="350" />
+		<constructor-arg name="alchohol" ref="alchoholID" />
+	</bean>
+
+    <bean class="com.xworkz.chocolate.Alchohol" id="alchoholID">
+		<constructor-arg name="name" value="methanol" />
+		<constructor-arg name="bp" value="65" />
+		<constructor-arg name="destiny" value="0.79" />
+	</bean>
+
+	  <bean class="com.xworkz.chocolate.VaccinationCenter" id="vaccinecenter">
+		<constructor-arg name="name" value="iii" />
+		<constructor-arg name="vaccinName" value="covishield" />
+		<constructor-arg name="centeraddress" ref="centerID" />
+		
+	</bean>
+	
+	<bean class="com.xworkz.chocolate.CenterAddress" id="centerID">
+		<constructor-arg name="buildingNo" value="31" />
+		<constructor-arg name="wardNo" value="14" />
+		<constructor-arg name="pinCode" value="512363" />
+		<constructor-arg name="area" value="BTM" />
+	</bean>
 </beans>
