@@ -4,19 +4,20 @@ public class MobileDTO {
 
 	private String name;
 	private String brand;
-	private String ram;
-	private String price;
+	private int ram;
+	private double cost;
 
 	public MobileDTO() {
 		System.out.println("MobileDTO object is created");
 	}
 
-	public MobileDTO(String name, String brand, String ram, String price) {
+	public MobileDTO(String name, String brand, int ram, double price) {
 		super();
 		this.name = name;
 		this.brand = brand;
 		this.ram = ram;
-		this.price = price;
+		this.cost = cost;
+		System.out.println(this.getClass().getSimpleName() + "object created");
 	}
 
 	public String getName() {
@@ -35,25 +36,25 @@ public class MobileDTO {
 		this.brand = brand;
 	}
 
-	public String getRam() {
+	public int getRam() {
 		return ram;
 	}
 
-	public void setRam(String ram) {
+	public void setRam(int ram) {
 		this.ram = ram;
 	}
 
-	public String getPrice() {
-		return price;
+	public double getCost() {
+		return cost;
 	}
 
-	public void setPrice(String price) {
-		this.price = price;
+	public void setCost(double cost) {
+		this.cost = cost;
 	}
 
 	@Override
 	public String toString() {
-		return "MObileDTO [name=" + name + ", brand=" + brand + ", ram=" + ram + ", price=" + price + "]";
+		return "MObileDTO [name=" + name + ", brand=" + brand + ", ram=" + ram + ", cost=" + cost + "]";
 	}
 
 }
