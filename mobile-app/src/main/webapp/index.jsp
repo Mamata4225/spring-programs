@@ -11,19 +11,17 @@
 	<form action="mobile.do" method="post">
 		<pre>
 
-          <label>Name</label><input type="text" name="name">
-          <label>Brand</label><input type="text" name="brand">
-          <label>Ram</label><input type="text" name="ram">
-          <label>Cost<label><input type="text" name="cost">
+          <label>Name</label><input type="text" name="name"><h6>${mobileNameErrorMessage}</h6>
+          <label>Brand</label><input type="text" name="brand"><h6>${mobileBrandErrorMessage}</h6>
+          <label>Ram</label><input type="text" name="ram"><h6>${mobileRamErrorMessage}</h6>
+          <label>Cost<label><input type="text"name="cost"><h6>${mobileCostErrorMessage}</h6>
 
+		
 		
 		</pre>
 		<input type="submit" value="submit">
 
 	</form>
-	<div>
-	<h2>${MobileResponse}</h2>
 
-	</div>
 </body>
 </html>

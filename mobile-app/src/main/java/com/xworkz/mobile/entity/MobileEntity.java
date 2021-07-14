@@ -7,30 +7,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="mobile_table")
-public class MobileEntity implements java.io.Serializable{
+@Table(name = "mobile_table")
+public class MobileEntity implements java.io.Serializable {
 
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="MOBILE_ID")
+	@Column(name = "MOBILE_ID")
 	private int id;
-	
-	@Column(name="MOBILE_NAME")
+
+	@Column(name = "MOBILE_NAME")
 	private String name;
 
-	@Column(name="MOBILE_BRAND")
+	@Column(name = "MOBILE_BRAND")
 	private String brand;
-	
-	@Column(name="MOBILE_RAM")
+
+	@Column(name = "MOBILE_RAM")
 	private int ram;
-	
-	@Column(name="MOBILE_COST")
+
+	@Column(name = "MOBILE_COST")
 	private double cost;
 
-	
 	public MobileEntity(String name, String brand, int ram, double cost) {
 		super();
 		this.name = name;
@@ -39,12 +36,10 @@ public class MobileEntity implements java.io.Serializable{
 		this.cost = cost;
 	}
 
-
 	public MobileEntity() {
 		super();
-}
+	}
 
-	
 	public String getName() {
 		return name;
 	}
@@ -77,11 +72,10 @@ public class MobileEntity implements java.io.Serializable{
 		this.cost = cost;
 	}
 
-
 	@Override
 	public String toString() {
-		return "MobileEntity [mobileID=" + id + ", name=" + name + ", brand=" + brand + ", ram=" + ram
-				+ ", cost=" + cost + "]";
+		return "MobileEntity [mobileID=" + id + ", name=" + name + ", brand=" + brand + ", ram=" + ram + ", cost="
+				+ cost + "]";
 	}
-	
+
 }

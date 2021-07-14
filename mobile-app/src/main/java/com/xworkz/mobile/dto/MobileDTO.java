@@ -1,5 +1,7 @@
 package com.xworkz.mobile.dto;
 
+
+
 public class MobileDTO {
 
 	private String name;
